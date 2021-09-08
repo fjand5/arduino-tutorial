@@ -24,17 +24,24 @@
         <el-menu-item index="3" disabled>Info</el-menu-item>
         <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
         </el-menu>
-
+        {{getNearWifi}}
     </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
     data() {
       return {
         activeIndex: '1',
         activeIndex2: '1'
       };
+    },
+    computed:{
+      ...mapGetters(['getNearWifi'])
+    },
+    mounted:function(){
+      this.$store.dispatch('updateNearWifi')
     },
     methods: {
       handleSelect(key, keyPath) {

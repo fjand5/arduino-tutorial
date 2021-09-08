@@ -49,6 +49,7 @@ void scanWifi() {
   }
   String ret;
   serializeJson(array, ret);
+  server.sendHeader("Access-Control-Allow-Origin", "*");
   server.send(200, "application/json", ret.c_str());
 
 }
