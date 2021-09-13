@@ -24,7 +24,7 @@ bool loadConfig() {
   // use configFile.readString instead.
   configFile.readBytes(buf.get(), size);
 
-  StaticJsonDocument <10000> doc;
+  DynamicJsonDocument doc(10000);
   auto error = deserializeJson(doc, buf.get());
   JsonObject objData;
   if (error) {
@@ -39,7 +39,7 @@ bool loadConfig() {
 }
 
 bool saveConfig() {
-  StaticJsonDocument <10000> doc;
+  DynamicJsonDocument doc(10000);
   JsonObject objData = doc.to<JsonObject>();
 
   

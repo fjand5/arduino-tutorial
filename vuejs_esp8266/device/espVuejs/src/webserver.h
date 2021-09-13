@@ -49,7 +49,6 @@ void scanWifi() {
   }
   String ret;
   serializeJson(array, ret);
-  server.sendHeader("Access-Control-Allow-Origin", "*");
   server.send(200, "application/json", ret.c_str());
 
 }
@@ -59,6 +58,14 @@ void handleIndex() {
   server.send(200, "text/html", index_html, index_html_length);
 }
 void setupWebserver(){
+    server.addHook([](const String & method, const String & url, WiFiClient * client, ESP8266WebServer::ContentTypeFunction contentType) {
+    (void)method;      // GET, PUT, ...
+    (void)url;         // example: /root/myfile.html
+    (void)client;      // the webserver tcp client connection
+    (void)contentType; // contentType(".html") => "text/html"
+    server.sendHeader("Access-Control-Allow-Origin", "*");
+    return ESP8266WebServer::CLIENT_REQUEST_CAN_CONTINUE;
+  });
   server.on("/", handleIndex);
   server.on("/scanWifi", scanWifi);
   server.on("/js/app.js", [](){

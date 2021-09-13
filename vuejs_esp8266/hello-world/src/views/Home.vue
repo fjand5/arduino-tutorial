@@ -1,35 +1,48 @@
 <template>
-    <div class="home">
-        <el-menu
-        :default-active="activeIndex2"
-        class="el-menu-demo"
-        mode="horizontal"
-        @select="handleSelect"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
-        <el-menu-item index="1">Processing Center</el-menu-item>
-        <el-submenu index="2">
-            <template slot="title">Workspace</template>
-            <el-menu-item index="2-1">item one</el-menu-item>
-            <el-menu-item index="2-2">item two</el-menu-item>
-            <el-menu-item index="2-3">item three</el-menu-item>
-            <el-submenu index="2-4">
-            <template slot="title">item four</template>
-            <el-menu-item index="2-4-1">item one</el-menu-item>
-            <el-menu-item index="2-4-2">item two</el-menu-item>
-            <el-menu-item index="2-4-3">item three</el-menu-item>
-            </el-submenu>
-        </el-submenu>
-        <el-menu-item index="3" disabled>Info</el-menu-item>
-        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
-        </el-menu>
-        {{getNearWifi}}
-    </div>
+<el-container>
+  <el-header>
+    <el-row
+      type="flex"
+    >
+      <el-col :span="22"><el-menu
+          :default-active="activeIndex2"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b">
+          <el-menu-item index="1">Processing Center</el-menu-item>
+          <el-submenu index="2">
+              <template slot="title">Workspace</template>
+              <el-menu-item index="2-1">item one</el-menu-item>
+              <el-menu-item index="2-2">item two</el-menu-item>
+              <el-menu-item index="2-3">item three</el-menu-item>
+              <el-submenu index="2-4">
+              <template slot="title">item four</template>
+              <el-menu-item index="2-4-1">item one</el-menu-item>
+              <el-menu-item index="2-4-2">item two</el-menu-item>
+              <el-menu-item index="2-4-3">item three</el-menu-item>
+              </el-submenu>
+          </el-submenu>
+          <el-menu-item index="3" disabled>Info</el-menu-item>
+          <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
+      </el-menu>
+    </el-col>
+      <el-col :span="2">
+        
+        <el-button @click="$showWifiSelector" class="wifi-button" type="primary" icon="el-icon-share" round></el-button>
+      </el-col>
+    </el-row>
+    
+
+  </el-header>
+  <el-main>Main</el-main>
+  <el-footer>Footer</el-footer>
+</el-container>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
 export default {
     data() {
       return {
@@ -38,10 +51,8 @@ export default {
       };
     },
     computed:{
-      ...mapGetters(['getNearWifi'])
     },
     mounted:function(){
-      this.$store.dispatch('updateNearWifi')
     },
     methods: {
       handleSelect(key, keyPath) {
@@ -53,5 +64,10 @@ export default {
 </script>
 
 <style>
-
+.el-header{
+  background: #545c64;
+}
+.wifi-button{
+  transform: translateY(25%);
+}
 </style>

@@ -5,13 +5,13 @@
 void setup(void) {
   Serial.begin(115200);
   setupStore();
-  // setupWifi();
-  // setupWebserver();
+  setupWifi();
+  setupWebserver();
   Serial.println(getValue("count"));
 }
 
 void loop(void) {
-  // loopWebserver();
+  loopWebserver();
   delay(1000);
   setValue("count", String(millis()), true);
 
