@@ -1,7 +1,5 @@
 #pragma once
 #include "Adafruit_AVRProg.h"
-#include <FS.h>
-#include <LittleFS.h>
 Adafruit_AVRProg avrprog = Adafruit_AVRProg();
 #define LED_PROGMODE LED_BUILTIN
 #define LED_ERR LED_BUILTIN
@@ -31,22 +29,13 @@ void loopProg(void) {
   //        upload();
   //  }
 }
-void uploadProg(String path) {
-
-
-  File file = LittleFS.open(path, "r");
-  if (!file) {
-    Serial.println("Failed to open file for reading");
+uint32_t index_image =0;
+void copyImage(byte b) {
+  if(b == 13)
     return;
-  }
-  uint32_t i = 0;
-  while (file.available()) {
-    char c = file.read();
-    if ( c == 13)
-      continue;
-    image.image_hexcode[i++] = c;
-  }
-  file.close();
+  image.image_hexcode[index_image++] = b;
+}
+void uploadProg() {
 
   if (!avrprog.targetPower(true)) {
     avrprog.error("Failed to connect to target");

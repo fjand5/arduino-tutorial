@@ -14,19 +14,18 @@ const char* serverIndex1 = "<form method='POST' action='/update1' enctype='multi
 const char* serverIndex2 = "<form method='POST' action='/update2' enctype='multipart/form-data'><input type='file' name='update2'><input type='submit' value='Update2'></form>";
 
 File reciveFile;
-void uploadHanlder(int pin){
-     HTTPUpload& upload = server.upload();
-      if (upload.status == UPLOAD_FILE_START) {
-        avrprog.setSPI(pin, &SPI);
-        reciveFile = LittleFS.open( upload.filename, "w");
-      } else if (upload.status == UPLOAD_FILE_WRITE) {
-        reciveFile.write(upload.buf, upload.currentSize);
-      } else if (upload.status == UPLOAD_FILE_END) {
-        reciveFile.close();
-        uploadProg(upload.filename);
-        LittleFS.remove(upload.filename);
-      }
-      yield();
+void uploadHanlder(int pin) {
+  HTTPUpload& upload = server.upload();
+  if (upload.status == UPLOAD_FILE_START) {
+    avrprog.setSPI(pin, &SPI);
+    index_image = 0;
+  } else if (upload.status == UPLOAD_FILE_WRITE) {
+    for (int i = 0; i < upload.currentSize; i ++)
+      copyImage(upload.buf[i]);
+  } else if (upload.status == UPLOAD_FILE_END) {
+    uploadProg();
+  }
+  yield();
 }
 void setupUpload(void) {
   Serial.println("Booting Sketch...");
@@ -37,7 +36,7 @@ void setupUpload(void) {
       server.sendHeader("Connection", "close");
       server.send(200, "text/html", serverIndex1);
     });
-      server.on("/chip2", HTTP_GET, []() {
+    server.on("/chip2", HTTP_GET, []() {
       server.sendHeader("Connection", "close");
       server.send(200, "text/html", serverIndex2);
     });
@@ -45,22 +44,22 @@ void setupUpload(void) {
       server.sendHeader("Connection", "close");
       server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
     }, []() {
-        uploadHanlder(D1);
+      uploadHanlder(D1);
     });
-       server.on("/update2", HTTP_POST, []() {
+    server.on("/update2", HTTP_POST, []() {
       server.sendHeader("Connection", "close");
       server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
     }, []() {
-        uploadHanlder(D2);
+      uploadHanlder(D2);
     });
     server.begin();
   } else {
     Serial.println("WiFi Failed");
   }
-   Serial.println("");
+  Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());   
+  Serial.println(WiFi.localIP());
 }
 
 void loopUpload(void) {

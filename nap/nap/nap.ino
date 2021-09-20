@@ -6,10 +6,6 @@ void setup() {
   while (!Serial)
     ;
   delay(100);
-    if (!LittleFS.begin()) {
-    Serial.println("LittleFS mount failed");
-    return;
-  }
   setupProg();
   setupUpload();
 }
