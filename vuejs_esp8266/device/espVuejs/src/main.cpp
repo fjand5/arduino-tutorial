@@ -12,8 +12,8 @@ void setup(void) {
 
 void loop(void) {
   loopWebserver();
-  delay(1000);
-  setValue("count", String(millis()), true);
+  // delay(1000);
+  // setValue("count", String(millis()), true);
 
-  Serial.println(getValue("count"));
+  // Serial.println(getValue("count"));
 }

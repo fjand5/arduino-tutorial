@@ -1,3 +1,4 @@
+#pragma once
 #define STORE_FILE_NAME "store"
 #include <ArduinoJson.h>
 #include "FS.h"
