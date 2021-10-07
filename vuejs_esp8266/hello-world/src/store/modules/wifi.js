@@ -10,11 +10,14 @@ const wifi = {
     },
     actions: {
         updateNearWifi: function(context){
-            return api.get('/scanWifi')
+            return api.get('/scanwifi')
             .then((data)=>{
                 context.commit('setNeartWifi', data)
                 return Promise.resolve(true)
             })
+        },
+        setWifi: function(context,{_ssid,_sspw}){
+            return api.post('/setwifi',{_ssid,_sspw})
         }
     },
     getters: {

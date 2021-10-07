@@ -25,6 +25,7 @@ void setupWebserver(){
     (void)client;      // the webserver tcp client connection
     (void)contentType; // contentType(".html") => "text/html"
     server.sendHeader("Access-Control-Allow-Origin", "*");
+    server.sendHeader("Access-Control-Allow-Headers", "*");
     return ESP8266WebServer::CLIENT_REQUEST_CAN_CONTINUE;
   });
   server.on("/", handleIndex);
