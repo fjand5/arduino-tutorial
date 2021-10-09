@@ -5,10 +5,7 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include "programer.h"
-#ifndef STASSID
-#define STASSID "Vong Cat-Hide"
-#define STAPSK  "78787878"
-#endif
+
 ESP8266WebServer server(80);
 const char* serverIndex1 = "<form method='POST' action='/update1' enctype='multipart/form-data'><input type='file' name='update1'><input type='submit' value='Update1'></form>";
 const char* serverIndex2 = "<form method='POST' action='/update2' enctype='multipart/form-data'><input type='file' name='update2'><input type='submit' value='Update2'></form>";
@@ -29,8 +26,7 @@ void uploadHanlder(int pin) {
 }
 void setupUpload(void) {
   Serial.println("Booting Sketch...");
-  WiFi.mode(WIFI_AP_STA);
-  WiFi.begin(STASSID, STAPSK);
+
   if (WiFi.waitForConnectResult() == WL_CONNECTED) {
     server.on("/chip1", HTTP_GET, []() {
       server.sendHeader("Connection", "close");
@@ -56,10 +52,6 @@ void setupUpload(void) {
   } else {
     Serial.println("WiFi Failed");
   }
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
 }
 
 void loopUpload(void) {
