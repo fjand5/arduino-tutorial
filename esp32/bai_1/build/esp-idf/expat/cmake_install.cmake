@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Pro/esp/esp-idf/components/expat
+# Install script for directory: C:/Users/Luat/esp/esp-idf/components/expat
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

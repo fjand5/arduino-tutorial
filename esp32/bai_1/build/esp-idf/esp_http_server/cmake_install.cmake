@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Pro/esp/esp-idf/components/esp_http_server
+# Install script for directory: C:/Users/Luat/esp/esp-idf/components/esp_http_server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

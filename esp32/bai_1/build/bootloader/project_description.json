@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
-    "project_path":       "C:/Users/Pro/esp/esp-idf/components/bootloader/subproject",
-    "build_dir":          "C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader",
-    "config_file":        "C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/sdkconfig",
+    "project_path":       "C:/Users/Luat/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader",
+    "config_file":        "C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",
@@ -12,9 +12,9 @@
     "monitor_baud" :      "115200",
     "monitor_toolprefix": "xtensa-esp32-elf-",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "C:/Users/Pro/esp/esp-idf/components/efuse/Kconfig;C:/Users/Pro/esp/esp-idf/components/esp32/Kconfig;C:/Users/Pro/esp/esp-idf/components/esp_common/Kconfig;C:/Users/Pro/esp/esp-idf/components/esp_system/Kconfig;C:/Users/Pro/esp/esp-idf/components/log/Kconfig;C:/Users/Pro/esp/esp-idf/components/newlib/Kconfig;C:/Users/Pro/esp/esp-idf/components/spi_flash/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/Pro/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/Pro/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/Pro/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS" : "C:/Users/Luat/esp/esp-idf/components/efuse/Kconfig;C:/Users/Luat/esp/esp-idf/components/esp32/Kconfig;C:/Users/Luat/esp/esp-idf/components/esp_common/Kconfig;C:/Users/Luat/esp/esp-idf/components/esp_system/Kconfig;C:/Users/Luat/esp/esp-idf/components/log/Kconfig;C:/Users/Luat/esp/esp-idf/components/newlib/Kconfig;C:/Users/Luat/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/Luat/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/Luat/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/Luat/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "C:/Users/Pro/esp/esp-idf/components/bootloader", "C:/Users/Pro/esp/esp-idf/components/bootloader_support", "C:/Users/Pro/esp/esp-idf/components/efuse", "C:/Users/Pro/esp/esp-idf/components/esp32", "C:/Users/Pro/esp/esp-idf/components/esp_common", "C:/Users/Pro/esp/esp-idf/components/esp_hw_support", "C:/Users/Pro/esp/esp-idf/components/esp_rom", "C:/Users/Pro/esp/esp-idf/components/esp_system", "C:/Users/Pro/esp/esp-idf/components/esptool_py", "C:/Users/Pro/esp/esp-idf/components/hal", "C:/Users/Pro/esp/esp-idf/components/log", "C:/Users/Pro/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/Pro/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/Pro/esp/esp-idf/components/newlib", "C:/Users/Pro/esp/esp-idf/components/partition_table", "C:/Users/Pro/esp/esp-idf/components/soc", "C:/Users/Pro/esp/esp-idf/components/spi_flash", "C:/Users/Pro/esp/esp-idf/components/xtensa", "" ]
+    "build_component_paths" : [ "C:/Users/Luat/esp/esp-idf/components/bootloader", "C:/Users/Luat/esp/esp-idf/components/bootloader_support", "C:/Users/Luat/esp/esp-idf/components/efuse", "C:/Users/Luat/esp/esp-idf/components/esp32", "C:/Users/Luat/esp/esp-idf/components/esp_common", "C:/Users/Luat/esp/esp-idf/components/esp_hw_support", "C:/Users/Luat/esp/esp-idf/components/esp_rom", "C:/Users/Luat/esp/esp-idf/components/esp_system", "C:/Users/Luat/esp/esp-idf/components/esptool_py", "C:/Users/Luat/esp/esp-idf/components/hal", "C:/Users/Luat/esp/esp-idf/components/log", "C:/Users/Luat/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/Luat/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/Luat/esp/esp-idf/components/newlib", "C:/Users/Luat/esp/esp-idf/components/partition_table", "C:/Users/Luat/esp/esp-idf/components/soc", "C:/Users/Luat/esp/esp-idf/components/spi_flash", "C:/Users/Luat/esp/esp-idf/components/xtensa", "" ]
 }

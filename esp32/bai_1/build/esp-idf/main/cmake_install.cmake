@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/main
+# Install script for directory: C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

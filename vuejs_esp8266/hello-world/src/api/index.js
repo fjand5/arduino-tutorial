@@ -1,6 +1,6 @@
 import axios from 'axios'
 const esp8266 = axios.create({
-    baseURL: 'http://192.168.2.100',
+    // baseURL: 'http://192.168.2.100',
   });
 // Add a request interceptor
 // esp8266.interceptors.request.use(function (config) {

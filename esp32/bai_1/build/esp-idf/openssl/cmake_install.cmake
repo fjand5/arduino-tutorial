@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Pro/esp/esp-idf/components/openssl
+# Install script for directory: C:/Users/Luat/esp/esp-idf/components/openssl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

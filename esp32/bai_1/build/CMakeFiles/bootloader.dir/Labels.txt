@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/CMakeFiles/bootloader
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/CMakeFiles/bootloader.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/CMakeFiles/bootloader-complete.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/Pro/Desktop/arduino-tutorial/esp32/1_log/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/CMakeFiles/bootloader
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/CMakeFiles/bootloader.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/CMakeFiles/bootloader-complete.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/Luat/Desktop/myGit/GitHub/arduino-tutorial/esp32/bai_1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
